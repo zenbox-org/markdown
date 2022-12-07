@@ -1,4 +1,4 @@
-import { isEqualBy } from 'zenbox-util/lodash'
+import { isEqualByD } from 'zenbox-util/lodash'
 import { adjust, nail } from 'zenbox-util/string'
 import { getDuplicatesRefinement } from 'zenbox-util/zod'
 import { z } from 'zod'
@@ -31,7 +31,7 @@ export function parseSectionUid(sectionUid: SectionUid): SectionUid {
   return SectionUidSchema.parse(sectionUid)
 }
 
-export const isEqualSection = (a: Section) => (b: Section) => isEqualBy(a, b, parseSectionUid)
+export const isEqualSection = (a: Section) => (b: Section) => isEqualByD(a, b, parseSectionUid)
 
 export const renderSectionMD = (level = 3) => (section: Section) => nail(`
   ${'#'.repeat(level)} ${section.title}
