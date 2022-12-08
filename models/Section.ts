@@ -1,6 +1,6 @@
-import { isEqualByD } from 'zenbox-util/lodash'
-import { adjust, nail } from 'zenbox-util/string'
-import { getDuplicatesRefinement } from 'zenbox-util/zod'
+import { isEqualByD } from 'libs/utils/lodash'
+import { adjust, nail } from 'libs/utils/string'
+import { getDuplicatesRefinement } from 'libs/utils/zod'
 import { z } from 'zod'
 
 export const SectionSchema = z.object({
