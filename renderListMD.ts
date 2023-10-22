@@ -1,5 +1,5 @@
 import { identity } from 'lodash-es'
-import { Mapper } from '../generic/models/Mapper'
+import { Mapper } from '../utils/Mapper'
 
 export function renderListMD<T>(array: T[], renderer: Mapper<T, string> = identity) {
   return array.map(el => `* ${renderer(el)}`).join('\n')
